@@ -1,0 +1,52 @@
+Instasllation:
+Install webpack & webpack cli --save-dev 
+
+Webpack 4 Zero Config
+
+If you ever used webpack 3 before, you know that you have to create a configuration file called webpack.config.js in order to tell webpack where your files are, what to do with them, and where to output the result. Webpack 4, by default, is zero config now, here is the quote from webpack’s official website:
+
+What if we change ‘./greeting.js’ to ‘greeting.js’ ? What will happen?
+
+Well, if you do so, webpack will assume you are looking for a node module, and it will go and search that name in node_modules folder, not in your source code folder, so make sure to always add a relative path to where your file is located when using the “import” statement.
+
+Another note is that the file extension “.js” is optional in ./greeting.js. Webpack is assuming that a file is a JavaScript by default, so it’s possible to write:
+import { sayHello } from './greeting'
+But feel free to specify the extension explicitly in case it makes your code more readable.
+
+
+Then add it to the previous css-loader rule we added above (refer back to Listing 3-4), so the rule will become:{  test: /\.css$/i,  use: ['style-loader', 'css-loader'],}Note here that we are using two loaders for files that have a “.css” extension. Also note that the order we put in these loaders is important. You might be guessing that the first loader at the left (style-loader) will be applied first, then the second one (css-loader) will be applied after it. But the reality is that the order webpack will use is the opposite: the order starts from the right to the left:1- Webpack will use “css-loader” (that will transform our CSS into CommonJS)2- The “style-loader” will be used secondly (which will inject that CSS in our page <head>).
+
+
+Now that we have configured what we need for our CSS/SCSS to work, there is one thing though that is kind of annoying: our CSS is injected in the index.html page between <style></style> tags. That might be okay when we have just some few styles, but if we have a lot of CSS, then embedding it directly within our HTML page is not a good idea at all.With webpack, we can extract the CSS we imported to its own file with the help of a plugin called “mini-css-extract-plugin.” Let’s try to do it by first installing it:
+
+
+Creating multiple outfile file and minified files with  [name].js / [name].css etc
+
+using hash
+
+using Manifest module to dynamic mapping of latest hash files
+
+Alternative to Manifest is HTML plugin'
+
+The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation
+
+webpack is module bundler.
+
+why we need both loader / style n css loader
+
+what is webpack merge
+
+
+Package Manager
+Packager
+Build Manager
+Buil Tool
+Deployment Tool
+
+Webpack in play 
+1 entry
+2 output
+3 loaders
+4 plugins
+
+
