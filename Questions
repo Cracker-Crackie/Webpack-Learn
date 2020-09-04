@@ -11,3 +11,43 @@ What is the name of the package manager that we use with Webpack 5?
 How would you remove the lodash library using the command line?
 What is the difference between source code and distribution code when working with Webpack 5?
 When setting up your project, why might you adjust the package.json file?
+what is optimization.runtimeChunk?
+What is Module path ?
+what is SplitChunksPlugin?
+what is MiniCssExtractPlugin?
+What is Dynamic Import in webpack?
+What is Split chunk cache ?
+What is the difference between code splitting and modular programming?
+What is a code chunk?
+How do dynamic imports differ from entry points?
+How are preload directives preferable to prefetch directives?
+What is meant by code linting?
+What is meant by the term promise?
+How does SplitChunksPlugin prevent duplication?
+What does the webpack-bundle-optimize-helper tool offer?
+What does the webpack-chart plugin do?
+What is treemapping?
+what is asset management configurations?
+What is HtmlWebpackPlugin?
+Explain Utilizing the manifest?
+What is the difference in Webpack 5 between configurations and options? 
+What is a config flag?
+Which loader is required for loading images into Webpack projects?
+What type of data file does Webpack allow the import of without the use of a loader?
+What does Webpack's manifest record indicate?
+What does the Bail option do?
+What does the Parallelism option do?
+What does the Records Input Path option do?
+What will setting AMD to false do?What is compiling?
+What is an i18n loader?
+What is the toolchain that Webpack typically uses to convert ECMA scripts?
+What is Babel mainly used for?
+Which loader allows users to add custom handling of Babel's configuration?
+What does polymer-webpack-loader do?
+What does polymer-webpack-loader offer a developer?
+When using the Node.js API, what will the callback function that is provided run?
+
+
+
+
+
