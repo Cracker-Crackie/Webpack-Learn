@@ -19,4 +19,8 @@ It can be more complicated to use than alternatives, but this is mainly due to 
 It is more flexible than Browserify, allowing the user to select more entry points and use different types of assets. It's also better, when it comes to speed and flexibility, for bundling large web applications and for single-page web applications.
 
 
-What is Module Path ?
+CSS loader -> Style loader & CSS loader.
+Image Loader -> file loader & URL loader.
+
+Plugins
+Plugins serve the purpose of doing everything that a loader cannot do. Loaders often help run code that is not native to Webpack and plugins do the same; however, loaders are often built by the community whereas plugins are built by Webpack's in-house developers.
