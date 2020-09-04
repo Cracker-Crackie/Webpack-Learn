@@ -17,3 +17,6 @@ Webpack 5 offers control over HTTP requests, which improves speed and performanc
 Webpack 5 has some advantages over rival bundlers such as Browserify and systemjs—namely, speed. The build time directly depends on the configuration but it's faster than its nearest rivals.Little or no configuration is required to use Webpack 5, but you always have it as an option.
 It can be more complicated to use than alternatives, but this is mainly due to its versatility and scope and it is well worth overcoming.Webpack 5 has optimization plugins that remove unused code fantastically well. It also has many related features, such as tree shaking, which we will discuss in more detail later in this book.
 It is more flexible than Browserify, allowing the user to select more entry points and use different types of assets. It's also better, when it comes to speed and flexibility, for bundling large web applications and for single-page web applications.
+
+
+What is Module Path ?
