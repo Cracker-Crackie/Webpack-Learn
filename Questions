@@ -1,0 +1,13 @@
+Questions
+
+What is Webpack?
+What is a bundle in Webpack?
+What is the latest version of Webpack, according to this guide?
+Which environment does Webpack work in?
+What is a dependency graph?
+When bundling, what entry is missing from the following command: 
+npm --save lodash 
+What is the name of the package manager that we use with Webpack 5?
+How would you remove the lodash library using the command line?
+What is the difference between source code and distribution code when working with Webpack 5?
+When setting up your project, why might you adjust the package.json file?
