@@ -1,0 +1,19 @@
+https://github.com/PacktPublishing/Webpack-5-Up-and-Running
+
+How Webpack works
+
+Webpack works by generating a dependency graph of assets in a set of source files, which it transpiles an optimized set of distribution files from. These source and distribution files contain source code and distribution code, respectively. This distributed code forms the output. Distribution is simply another name for the output or bundle.
+Webpack begins by finding an entry point in the source files and from there, it builds a dependency graph. The selection of an entry point is optional in Webpack 5 and the choice of selection will alter the nature of the build process, either in terms of speed or output optimization.
+Webpack 5 is capable of transforming, bundling, or packaging just about any resource or asset.
+We have covered a good overview of how the software works; experienced users of previous Webpack versions may consider this overview rudimentary, so let's have a look at what is new in this current version.
+
+Compatibility Issue Solved
+
+Webpack 5 takes over from version 4, where backward compatibility wasn't always possible with many of the various loaders available, which were often more compatible with version 2, which meant that a developer would often encounter deprecation warnings in the command line if version 2 wasn't used. Webpack 5 has now addressed this issue.
+
+The advantages of Webpack 5 are summarized as follows:
+
+Webpack 5 offers control over HTTP requests, which improves speed and performance, and also alleviates security concerns.
+Webpack 5 has some advantages over rival bundlers such as Browserify and systemjs—namely, speed. The build time directly depends on the configuration but it's faster than its nearest rivals.Little or no configuration is required to use Webpack 5, but you always have it as an option.
+It can be more complicated to use than alternatives, but this is mainly due to its versatility and scope and it is well worth overcoming.Webpack 5 has optimization plugins that remove unused code fantastically well. It also has many related features, such as tree shaking, which we will discuss in more detail later in this book.
+It is more flexible than Browserify, allowing the user to select more entry points and use different types of assets. It's also better, when it comes to speed and flexibility, for bundling large web applications and for single-page web applications.
