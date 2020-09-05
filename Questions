@@ -1,62 +1,164 @@
-Questions
+•	Questions
 
-What is Webpack?
-What is a bundle in Webpack?
-What is the latest version of Webpack, according to this guide?
-Which environment does Webpack work in?
-What is a dependency graph?
-When bundling, what entry is missing from the following command: 
-npm --save lodash 
-What is the name of the package manager that we use with Webpack 5?
-How would you remove the lodash library using the command line?
-What is the difference between source code and distribution code when working with Webpack 5?
-When setting up your project, why might you adjust the package.json file?
-what is optimization.runtimeChunk?
-What is Module path ?
-what is SplitChunksPlugin?
-what is MiniCssExtractPlugin?
-What is Dynamic Import in webpack?
-What is Split chunk cache ?
-What is the difference between code splitting and modular programming?
-What is a code chunk?
-How do dynamic imports differ from entry points?
-How are preload directives preferable to prefetch directives?
-What is meant by code linting?
-What is meant by the term promise?
-How does SplitChunksPlugin prevent duplication?
-What does the webpack-bundle-optimize-helper tool offer?
-What does the webpack-chart plugin do?
-What is treemapping?
-what is asset management configurations?
-What is HtmlWebpackPlugin?
-Explain Utilizing the manifest?
-What is the difference in Webpack 5 between configurations and options? 
-What is a config flag?
-Which loader is required for loading images into Webpack projects?
-What type of data file does Webpack allow the import of without the use of a loader?
-What does Webpack's manifest record indicate?
-What does the Bail option do?
-What does the Parallelism option do?
-What does the Records Input Path option do?
-What will setting AMD to false do?What is compiling?
-What is an i18n loader?
-What is the toolchain that Webpack typically uses to convert ECMA scripts?
-What is Babel mainly used for?
-Which loader allows users to add custom handling of Babel's configuration?
-What does polymer-webpack-loader do?
-What does polymer-webpack-loader offer a developer?
-When using the Node.js API, what will the callback function that is provided run?
+•	What is Webpack? 
+Webpack is a static module bundler for JavaScript applications — it takes all the code from your application and makes it usable in a web browser. Modules are reusable chunks of code built from your app’s JavaScript, node_modules, images, and the CSS styles which are packaged to be easily used in your website. Webpack separates the code based on how it is used in your app, and with this modular breakdown of responsibilities, it becomes much easier to manage, debug, verify, and test your code.
+
+•	What is a bundle in Webpack?
+When Webpack processes your application, it builds a dependency graph which maps out the modules that your project needs and generates one or more bundles. A bundle is a distinct grouping of connected code that has been compiled and transformed for the browser.
+If one file depends on another (it uses the code from a separate file), Webpack treats this as a dependency. Webpack also takes your non-code assets (images, fonts, styles, etc.) and converts them to dependencies for your application.
+Webpack can be broken down into these 5 principals:
+Entry
+Output
+Loaders
+Plugins
+Mode
+
+•	What is the latest version of Webpack, according to this guide? Webpack 5
+
+•	Which environment does Webpack work in? Development Mode  / Prod Mode
+
+•	What is a dependency graph?
+Any time one file depends on another, webpack treats this as a dependency. This allows webpack to take non-code assets, such as images or web fonts, and also provide them as dependencies for your application.
+When webpack processes your application, it starts from a list of modules defined on the command line or in its configuration file. Starting from these entry points, webpack recursively builds a dependency graph that includes every module your application needs, then bundles all of those modules into a small number of bundles - often, just one - to be loaded by the browser.
+Extra
+Bundling your application is especially powerful for HTTP/1.1 clients, as it minimizes the number of times your app has to wait while the browser starts a new request. For HTTP/2, you can also use Code Splitting to achieve best results.
+
+•	What is the name of the package manager that we use with Webpack 5?
+
+•	How would you remove the lodash library using the command line? to use require / inmport for calling/ downloadipng dependency
 
 
+•	What is the difference between source code and distribution code when working with Webpack 5?
+Source code -> actual code
+Distribution code -> compiled code 
+
+•	When setting up your project, why might you adjust the package.json file?
+Yes
+
+•	what are optimization option ?  Name few ?
+optimization.minimize - to minimize bundle file & by default uglify-js
+optimization.minimizer - to provide which minimizer technique to use
+optimization.splitChunks - The SplitChunksPlugin allows us to extract common dependencies into an existing entry chunk or an entirely new chunk. Always enabled.
+optimization.runtimeChunkFinds modules which are shared between chunk and splits them into separate chunks to reduce duplication or separate vendor modules from application modules.
+optimization.noEmitOnErrors - Enabled in production mode. Elsewise disabled. Don’t write output assets when compilation errors. unable to use working part of the application. And no broken bundles
+optimization.namedModules - module names
+optimization.namedChunks - chunks names 
+optimization.moduleIds - 
+optimization.chunkIds - 
+optimization.nodeEnv - to set mode
+optimization.mangleWasmImports
+optimization.removeAvailableModules
+optimization.removeEmptyChunks
+optimization.mergeDuplicateChunks
+optimization.flagIncludedChunks
+optimization.occurrenceOrder
+optimization.providedExports
+optimization.usedExports
+optimization.concatenateModules
+optimization.sideEffects
+optimization.portableRecords
+optimization.mangleExports
+optimization.innerGraph
+optimization.realContentHash
+
+• what is CommonsChunksPlugin?
+The CommonsChunkPlugin was used to avoid duplicated dependencies across them, but further optimizations were not possible.Since webpack v4, the CommonsChunkPlugin was removed in favor of optimization.splitChunks.
+
+•	What is Module path / Module Resolution ? 
+A resolver is a library which helps in locating a module by its absolute path. A module can be required as a dependency from another module as:
+The dependency module can be from the application code or a third-party library. The resolver helps webpack find the module code that needs to be included in the bundle for every such require/import statement. webpack uses enhanced-resolve to resolve file paths while bundling modules.
+
+• Module paths
+import 'module';
+import 'module/lib/file';
+Modules are searched for inside all directories specified in resolve.modules. You can replace the original module path by an alternate path by creating an alias for it using the resolve.alias configuration option.
+
+•	what is MiniCssExtractPlugin?
+This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
+
+•	What is Dynamic Import in webpack?
+The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It can be called from any place in the code.
+
+•	What is Split chunk cache ?
+•	What is the difference between code splitting and modular programming?
+•	What is a code chunk?
+•	How do dynamic imports differ from entry points?
+•	How are preload directives preferable to prefetch directives?
+•	What is meant by code linting?
+•	What is meant by the term promise?
+•	How does SplitChunksPlugin prevent duplication?
+•	What does the webpack-bundle-optimize-helper tool offer?
+•	What does the webpack-chart plugin do?
+•	What is treemapping?
+•	what is asset management configurations?
+•	What is HtmlWebpackPlugin?
+•	Explain Utilizing the manifest?
+•	What is the difference in Webpack 5 between configurations and options? 
+•	What is a config flag?
+•	Which loader is required for loading images into Webpack projects?
+•	What type of data file does Webpack allow the import of without the use of a loader?
+•	What does Webpack's manifest record indicate?
+•	What does the Bail option do?
+•	What does the Parallelism option do?
+•	What does the Records Input Path option do?
+•	What will setting AMD to false do?What is compiling?
+•	What is an i18n loader?
+•	What is the toolchain that Webpack typically uses to convert ECMA scripts?
+•	What is Babel mainly used for?
+•	Which loader allows users to add custom handling of Babel's configuration?
+•	What does polymer-webpack-loader do?
+•	What does polymer-webpack-loader offer a developer?
+•	When using the Node.js API, what will the callback function that is provided run?
+• Commands to install dependency & other loader, Plugins etc 
+•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
 
 
-URLs:
+Table of Contents
+👉 NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
+👉 How to bundle an Angular app for production
+👉 What are differences between SystemJS and Webpack?
+👉 How to add font-awesome to Angular 2 + CLI project
+👉 How to load image files with webpack file-loader
+👉 Can someone explain Webpack’s CommonsChunkPlugin
+👉 Angular2 CLI huge vendor bundle: how to improve size for prod?
+👉 HtmlWebpackPlugin injects relative path files which breaks when loading non-root website paths
+👉 Webpack how to build production code and how to use it
+👉 webpack is not recognized as a internal or external command,operable program or batch file
+👉 How to create multiple output paths in Webpack config
+👉 How to add fonts to create-react-app based projects?
+👉 webpack can’t find module if file named jsx
+👉 How to debug Angular with VSCode?
+👉 Path aliases for imports in WebStorm
+👉 Webpack-dev-server compiles files but does not refresh or make compiled javascript available to browser
+👉 Webpack loaders vs plugins; what’s the difference?
+👉 Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
+👉 Error: Cannot resolve module ‘style-loader’
+👉 Angular2: import external js file into component
+👉 Correct path for img on React.js
+👉 How to deploy node that uses Webpack to heroku
+👉 Webpack import returns undefined, depending on the order of imports
+👉 Serving static assets in webpack dev server
+👉 Conflict: Multiple assets emit to the same filename
+👉 Is it possible to write webpack config in typescript?
+👉 How to minify ES6 code using Webpack?
+👉 What is the value of using Webpack with HTTP/2
+👉 How to use images in css with Webpack
+👉 Avoiding relative paths in Angular CLI
 
-https://www.fullstack.cafe/webpack
-https://github.com/styopdev/webpack-interview-questions/blob/master/answers.md
-https://github.com/styopdev/webpack-interview-questions
-http://www.lib4dev.in/info/styopdev/webpack-interview-questions/92639750
-https://developpaper.com/collection-of-webpack-interview-questions/
+
+•	URLs:
+
+•	https://www.fullstack.cafe/webpack
+•	https://github.com/styopdev/webpack-interview-questions/blob/master/answers.md
+•	https://github.com/styopdev/webpack-interview-questions
+•	http://www.lib4dev.in/info/styopdev/webpack-interview-questions/92639750
+•	https://github.com/kukuu/webpack
+•	https://developpaper.com/collection-of-webpack-interview-questions/
+•	https://blog.jakoblind.no/how-webpack-decides-what-to-bundle/
+• https://docs.w3cub.com/webpack/plugins/mini-css-extract-plugin/
 
 
-  
+•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
+
+
+
