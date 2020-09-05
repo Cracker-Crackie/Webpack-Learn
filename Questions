@@ -122,28 +122,38 @@ This is a webpack plugin that simplifies creation of HTML files to serve your we
 https://www.npmjs.com/package/html-webpack-plugin
 
 
-•	Explain Utilizing the manifest?
-•	What is the difference in Webpack 5 between configurations and options? 
-•	What is a config flag?
-•	Which loader is required for loading images into Webpack projects?
+•	Explain Utilizing the manifest? TO DO
+
+•	What is the difference in Webpack 5 between configurations and options? What is a  --config flag?
+
+•	Which loader is required for loading images into Webpack projects? File loader / URL loader
+
 •	What type of data file does Webpack allow the import of without the use of a loader?
+
 •	What does Webpack's manifest record indicate?
+
 •	What does the Bail option do?
+
 •	What does the Parallelism option do?
+
 •	What does the Records Input Path option do?
-•	What will setting AMD to false do?What is compiling?
+
+•	What will setting AMD to false do ? What is compiling?
+
 •	What is an i18n loader?
-•	What is the toolchain that Webpack typically uses to convert ECMA scripts?
-•	What is Babel mainly used for?
+
+•	What is the toolchain that Webpack typically uses to convert ECMA scripts? Babel
+
+•	What is Babel mainly used for? This package allows transpiling JavaScript files using Babel and webpack
+
 •	Which loader allows users to add custom handling of Babel's configuration?
 •	What does polymer-webpack-loader do?
 •	What does polymer-webpack-loader offer a developer?
 •	When using the Node.js API, what will the callback function that is provided run?
+
 • Commands to install dependency & other loader, Plugins etc 
-•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
 
 
-Table of Contents
 👉 NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
 👉 How to bundle an Angular app for production
 👉 What are differences between SystemJS and Webpack?
@@ -161,7 +171,6 @@ Table of Contents
 👉 Webpack loaders vs plugins; what’s the difference?
 👉 Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
 👉 Error: Cannot resolve module ‘style-loader’
-
 👉 Correct path for img on React.js
 👉 How to deploy node that uses Webpack to heroku
 👉 Webpack import returns undefined, depending on the order of imports
@@ -185,8 +194,8 @@ Table of Contents
 •	https://blog.jakoblind.no/how-webpack-decides-what-to-bundle/
 • https://docs.w3cub.com/webpack/plugins/mini-css-extract-plugin/
 • https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
+•	https://webpack.js.org/loaders/
 
-•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
-
+•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
 
 
