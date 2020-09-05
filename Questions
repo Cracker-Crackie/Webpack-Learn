@@ -153,38 +153,56 @@ https://www.npmjs.com/package/html-webpack-plugin
 
 • Commands to install dependency & other loader, Plugins etc 
 
+•	 NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
+•  How to bundle an Angular app for production
 
-👉 NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
-👉 How to bundle an Angular app for production
-👉 What are differences between SystemJS and Webpack?
-👉 How to load image files with webpack file-loader
-👉 Can someone explain Webpack’s CommonsChunkPlugin
-👉 HtmlWebpackPlugin injects relative path files which breaks when loading non-root website paths
-👉 Webpack how to build production code and how to use it
-👉 webpack is not recognized as a internal or external command,operable program or batch file
-👉 How to create multiple output paths in Webpack config
-👉 How to add fonts to create-react-app based projects?
-👉 webpack can’t find module if file named jsx
-👉 How to debug Angular with VSCode?
-👉 Path aliases for imports in WebStorm
-👉 Webpack-dev-server compiles files but does not refresh or make compiled javascript available to browser
-👉 Webpack loaders vs plugins; what’s the difference?
-👉 Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
-👉 Error: Cannot resolve module ‘style-loader’
-👉 Correct path for img on React.js
-👉 How to deploy node that uses Webpack to heroku
-👉 Webpack import returns undefined, depending on the order of imports
-👉 Serving static assets in webpack dev server
-👉 Conflict: Multiple assets emit to the same filename
-👉 Is it possible to write webpack config in typescript?
-👉 How to minify ES6 code using Webpack?
-👉 What is the value of using Webpack with HTTP/2
-👉 How to use images in css with Webpack
-👉 Avoiding relative paths in Angular CLI
+•	 What are differences between SystemJS and Webpack?  Dynamic ES module loader. It is a Universal Module Loader for JavaScript. If you've used RequireJs or a CommonJs bundler in the past, you have probably created modules.Configurable module loader enabling dynamic ES module workflows in browsers and NodeJS;
+
+•	 How to load image files with webpack file-loader
+
+•	 Can someone explain Webpack’s CommonsChunkPlugin?
+The CommonsChunkPlugin is an opt-in feature that creates a separate file (known as a chunk), consisting of common modules shared between multiple entry points.
+The CommonsChunkPlugin has been removed in webpack v4 legato. To learn how chunks are treated in the latest version, check out the SplitChunksPlugin.
+By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. This results in page speed optimizations as the browser can quickly serve the shared code from cache, rather than being forced to load a larger bundle whenever a new page is visited.
+
+•	 HtmlWebpackPlugin injects relative path files which breaks when loading non-root website paths
+
+•	 Webpack how to build production code and how to use it
+
+•	 webpack is not recognized as a internal or external command,operable program or batch file.
+
+•	 How to create multiple output paths in Webpack config. TO DO
+
+•	 Webpack-dev-server compiles files but does not refresh or make compiled javascript available to browser -- watch option , May be output path not correct .
+
+•	 Webpack loaders vs plugins; what’s the difference?
+
+Loader Features
+Loaders can be chained. Each loader in the chain applies transformations to the processed resource. A chain is executed in reverse order. The first loader passes its result (resource with applied transformations) to the next one, and so forth. Finally, webpack expects JavaScript to be returned by the last loader in the chain.
+Loaders can be synchronous or asynchronous.
+Loaders run in Node.js and can do everything that’s possible there.
+Loaders can be configured with an options object (using query parameters to set options is still supported but has been deprecated).
+Normal modules can export a loader in addition to the normal main via package.json with the loader field.
+Plugins can give loaders more features.
+Loaders can emit additional arbitrary files.
+Loaders provide a way to customize the output through their preprocessing functions. Users now have more flexibility to include fine-grained logic such as compression, packaging, language translations and more.
+
+Plugin
+A webpack plugin is a JavaScript object that has an apply method. This apply method is called by the webpack compiler, giving access to the entire compilation lifecycle.
 
 
-•	URLs:
+•	 Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
+•	Error: Cannot resolve module ‘style-loader’
+•	Webpack import returns undefined, depending on the order of imports
+•	Serving static assets in webpack dev server
+•	Conflict: Multiple assets emit to the same filename
+•	Is it possible to write webpack config in typescript?
+•	How to minify ES6 code using Webpack?
+• What is the value of using Webpack with HTTP/2 ? TO DO
+• How to use images in css with Webpack
 
+
+URLs:
 •	https://www.fullstack.cafe/webpack
 •	https://github.com/styopdev/webpack-interview-questions/blob/master/answers.md
 •	https://github.com/styopdev/webpack-interview-questions
@@ -195,7 +213,8 @@ https://www.npmjs.com/package/html-webpack-plugin
 • https://docs.w3cub.com/webpack/plugins/mini-css-extract-plugin/
 • https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
 •	https://webpack.js.org/loaders/
+• https://github.com/systemjs/systemjs
+• https://medium.com/@imranhsayed/webpack-loaders-and-plugins-e13f79fe6b32
 
-•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	•	
 
 
