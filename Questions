@@ -242,6 +242,8 @@ CommonJS](https://addyosmani.com/writing-modular-js/).
 
 •Which modules design patterns webpack supports out of the box? common.js, amd and es6 (since webpack 2).
 
+•Browserify is mainly a tool to transform require() calls that work in Node.js into calls that work in the browser. It's a dependency graph for your source code only.
+
 
 
 URLs:
@@ -259,5 +261,8 @@ URLs:
 •https://medium.com/@imranhsayed/webpack-loaders-and-plugins-e13f79fe6b32
 •https://alligator.io/tooling/webpack-gulp-grunt-browserify/
 •https://fedev.tech/topic/webpack
+•https://stackoverflow.com/questions/37452402/webpack-loaders-vs-plugins-whats-the-difference/38281240#38281240
+•https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80
+
 
 
