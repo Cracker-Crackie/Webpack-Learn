@@ -1,20 +1,18 @@
-•	Questions
+•Questions
 
-•	What is Webpack? 
+•What is Webpack? 
 Webpack is a static module bundler for JavaScript applications — it takes all the code from your application and makes it usable in a web browser. Modules are reusable chunks of code built from your app’s JavaScript, node_modules, images, and the CSS styles which are packaged to be easily used in your website. Webpack separates the code based on how it is used in your app, and with this modular breakdown of responsibilities, it becomes much easier to manage, debug, verify, and test your code.
 
-•	What is Grunt.
+•What is Grunt.
 In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
-
 The Grunt ecosystem is huge and it's growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn't already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. See how to get started.
 
-what is Gulp ?
+•what is Gulp ?
  A toolkit to automate & enhance your workflow
 Leverage gulp and the flexibility of JavaScript to automate slow, repetitive workflows and compose them into efficient build pipelines.Gulp is a task runner that uses Node.js as a platform. Gulp purely uses the JavaScript code and helps to run front-end tasks and large-scale web applications. It builds system automated tasks like CSS and HTML minification, concatenating library files, and compiling the SASS files. These tasks can be run using Shell or Bash scripts on the command line.
-
 However, while Gulp is primarily based on the node.js module stream, Grunt mainly uses the fs (file system) module, which highlights one of the most important differences between the two tools: Grunt is strictly file-oriented and creates temporary local files during the execution of the tasks. Gulp, on the other hand, handles the processes via the memory and writes them in the target file immediately, giving the program a speed advantage.
 
-•	What is a bundle in Webpack?
+•What is a bundle in Webpack?
 When Webpack processes your application, it builds a dependency graph which maps out the modules that your project needs and generates one or more bundles. A bundle is a distinct grouping of connected code that has been compiled and transformed for the browser.
 If one file depends on another (it uses the code from a separate file), Webpack treats this as a dependency. Webpack also takes your non-code assets (images, fonts, styles, etc.) and converts them to dependencies for your application.
 Webpack can be broken down into these 5 principals:
@@ -24,29 +22,28 @@ Loaders
 Plugins
 Mode
 
-•	What is the latest version of Webpack, according to this guide? Webpack 5
+•What is the latest version of Webpack, according to this guide? Webpack 5
 
-•	Which environment does Webpack work in? Development Mode  / Prod Mode
+•Which environment does Webpack work in? Development Mode  / Prod Mode
 
-•	What is a dependency graph?
+•What is a dependency graph?
 Any time one file depends on another, webpack treats this as a dependency. This allows webpack to take non-code assets, such as images or web fonts, and also provide them as dependencies for your application.
 When webpack processes your application, it starts from a list of modules defined on the command line or in its configuration file. Starting from these entry points, webpack recursively builds a dependency graph that includes every module your application needs, then bundles all of those modules into a small number of bundles - often, just one - to be loaded by the browser.
 Extra
 Bundling your application is especially powerful for HTTP/1.1 clients, as it minimizes the number of times your app has to wait while the browser starts a new request. For HTTP/2, you can also use Code Splitting to achieve best results.
 
-•	What is the name of the package manager that we use with Webpack 5?
+•What is the name of the package manager that we use with Webpack 5?
 
-•	How would you remove the lodash library using the command line? to use require / inmport for calling/ downloadipng dependency
+•How would you remove the lodash library using the command line? to use require / inmport for calling/ downloadipng dependency
 
-
-•	What is the difference between source code and distribution code when working with Webpack 5?
+•What is the difference between source code and distribution code when working with Webpack 5?
 Source code -> actual code
 Distribution code -> compiled code 
 
-•	When setting up your project, why might you adjust the package.json file?
+•When setting up your project, why might you adjust the package.json file?
 Yes
 
-•	what are optimization option ?  Name few ?
+•what are optimization option ?  Name few ?
 optimization.minimize - to minimize bundle file & by default uglify-js
 optimization.minimizer - to provide which minimizer technique to use
 optimization.splitChunks - The SplitChunksPlugin allows us to extract common dependencies into an existing entry chunk or an entirely new chunk. Always enabled.
@@ -72,27 +69,27 @@ optimization.mangleExports
 optimization.innerGraph
 optimization.realContentHash
 
-• what is CommonsChunksPlugin?
+•what is CommonsChunksPlugin?
 The CommonsChunkPlugin was used to avoid duplicated dependencies across them, but further optimizations were not possible.Since webpack v4, the CommonsChunkPlugin was removed in favor of optimization.splitChunks.
 
-•	What is Module path / Module Resolution ? 
+•What is Module path / Module Resolution ? 
 A resolver is a library which helps in locating a module by its absolute path. A module can be required as a dependency from another module as:
 The dependency module can be from the application code or a third-party library. The resolver helps webpack find the module code that needs to be included in the bundle for every such require/import statement. webpack uses enhanced-resolve to resolve file paths while bundling modules.
 
-• Module paths
+•Module paths
 import 'module';
 import 'module/lib/file';
 Modules are searched for inside all directories specified in resolve.modules. You can replace the original module path by an alternate path by creating an alias for it using the resolve.alias configuration option.
 
-•	what is MiniCssExtractPlugin?
+•what is MiniCssExtractPlugin?
 This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
 
-•	What is Dynamic Import in webpack?
+•What is Dynamic Import in webpack?
 The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It can be called from any place in the code.
 
-•	What is Split chunk cache ? TO DO
+•What is Split chunk cache ? TO DO
 
-•	What is the difference between code splitting and modular programming?
+•What is the difference between code splitting and modular programming?
 Code splitting allows you to split your code into various bundles which can then be loaded on demand. If used correctly, can have a major impact on load time.
 Code splitting is one of the most compelling features of webpack. This feature allows you to split your code into various bundles which can then be loaded on demand or in parallel. It can be used to achieve smaller bundles and control resource load prioritization which, if used correctly, can have a major impact on load time.
 
@@ -104,19 +101,18 @@ Dynamic Imports: Split code via inline function calls within modules.
 
 Moudular Programming :  Modules help developer’s separate functionality and organize the codebase. 
 
-•	What is a code chunk? Chunk: This webpack-specific term is used internally to manage the bundling process. Bundles are composed out of chunks, of which there are several types (e.g. entry and child). Typically, chunks directly correspond with the output bundles however, there are some configurations that don't yield a one-to-one relationship.
+•What is a code chunk? Chunk: This webpack-specific term is used internally to manage the bundling process. Bundles are composed out of chunks, of which there are several types (e.g. entry and child). Typically, chunks directly correspond with the output bundles however, there are some configurations that don't yield a one-to-one relationship.
 
-•	How do dynamic imports differ from entry points? Can explain
+•How do dynamic imports differ from entry points? Can explain
 
-•	How are preload directives preferable to prefetch directives? NOT NEEDED
+•How are preload directives preferable to prefetch directives? NOT NEEDED
 
-•	What is meant by code linting? Code Linting - Linting is the automated checking of your source code for programmatic and stylistic errors. This is done by using a lint tool (otherwise known as linter). A lint tool is a basic static code analyzer.
+•What is meant by code linting? Code Linting - Linting is the automated checking of your source code for programmatic and stylistic errors. This is done by using a lint tool (otherwise known as linter). A lint tool is a basic static code analyzer.
 
-•	What is meant by the term promise? can Explain
+•What is meant by the term promise? can Explain
+•How does SplitChunksPlugin prevent duplication?
 
-•	How does SplitChunksPlugin prevent duplication?
-
-•	What does the webpack-bundle-optimize-helper tool offer? 
+•What does the webpack-bundle-optimize-helper tool offer? 
 This is a JavaScript library that reads a webpack stats.json file and gives back useful statistics about the file that helps the dev to reduce the bundle size.
 What’s in the stats file?
 As example of the stats file can be found inside the Bonsai repo itself right here.
@@ -124,69 +120,68 @@ The stats file contains full file paths, the file sizes, and the relationships b
 
 •	What is treemapping / TreeShaking? Tree shaking is a term commonly used in the JavaScript context for dead-code elimination. When we import and export modules in JavaScript, most of the time there is unused code floating around. Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
 Tools like webpack will detect dead code and mark it as “unused module” but it won’t remove the code. Webpack relies on minifiers to cleanup dead code, one of them is UglifyJS plugin, which will eliminate the dead code from the bundle.
-https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
 
-•	what is asset management configurations? to make complete ready with loader & all..
 
-•	What is HtmlWebpackPlugin?
+•what is asset management configurations? to make complete ready with loader & all..
+
+•What is HtmlWebpackPlugin?
 This is a webpack plugin that simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you, supply your own template using lodash templates or use your own loader.
-https://www.npmjs.com/package/html-webpack-plugin
 
+•Explain Utilizing the manifest? TO DO
 
-•	Explain Utilizing the manifest? TO DO
+•What is the difference in Webpack 5 between configurations and options? What is a  --config flag?
 
-•	What is the difference in Webpack 5 between configurations and options? What is a  --config flag?
+•Which loader is required for loading images into Webpack projects? File loader / URL loader
 
-•	Which loader is required for loading images into Webpack projects? File loader / URL loader
+•What type of data file does Webpack allow the import of without the use of a loader?
 
-•	What type of data file does Webpack allow the import of without the use of a loader?
+•What does Webpack's manifest record indicate?
 
-•	What does Webpack's manifest record indicate?
+•What does the Bail option do?
 
-•	What does the Bail option do?
+•What does the Parallelism option do?
 
-•	What does the Parallelism option do?
+•What does the Records Input Path option do?
 
-•	What does the Records Input Path option do?
+•What will setting AMD to false do ? What is compiling?
 
-•	What will setting AMD to false do ? What is compiling?
+•What is an i18n loader?
 
-•	What is an i18n loader?
+•What is the toolchain that Webpack typically uses to convert ECMA scripts? Babel
 
-•	What is the toolchain that Webpack typically uses to convert ECMA scripts? Babel
+•What is Babel mainly used for? This package allows transpiling JavaScript files using Babel and webpack
 
-•	What is Babel mainly used for? This package allows transpiling JavaScript files using Babel and webpack
+•Which loader allows users to add custom handling of Babel's configuration?
+•What does polymer-webpack-loader do?
+•What does polymer-webpack-loader offer a developer?
+•When using the Node.js API, what will the callback function that is provided run?
 
-•	Which loader allows users to add custom handling of Babel's configuration?
-•	What does polymer-webpack-loader do?
-•	What does polymer-webpack-loader offer a developer?
-•	When using the Node.js API, what will the callback function that is provided run?
+•Commands to install dependency & other loader, Plugins etc 
 
-• Commands to install dependency & other loader, Plugins etc 
+•NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
+•How to bundle an Angular app for production
 
-•	 NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack
-•  How to bundle an Angular app for production
+•What are differences between SystemJS and Webpack?  Dynamic ES module loader. It is a Universal Module Loader for JavaScript. If you've used RequireJs or a CommonJs bundler in the past, you have probably created modules.Configurable module loader enabling dynamic ES module workflows in browsers and NodeJS;
 
-•	 What are differences between SystemJS and Webpack?  Dynamic ES module loader. It is a Universal Module Loader for JavaScript. If you've used RequireJs or a CommonJs bundler in the past, you have probably created modules.Configurable module loader enabling dynamic ES module workflows in browsers and NodeJS;
+•How to load image files with webpack file-loader?
+•Describe the webpack runtime and manifest
 
-•	 How to load image files with webpack file-loader
-
-•	 Can someone explain Webpack’s CommonsChunkPlugin?
+•Can someone explain Webpack’s CommonsChunkPlugin?
 The CommonsChunkPlugin is an opt-in feature that creates a separate file (known as a chunk), consisting of common modules shared between multiple entry points.
 The CommonsChunkPlugin has been removed in webpack v4 legato. To learn how chunks are treated in the latest version, check out the SplitChunksPlugin.
 By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. This results in page speed optimizations as the browser can quickly serve the shared code from cache, rather than being forced to load a larger bundle whenever a new page is visited.
 
-•	 HtmlWebpackPlugin injects relative path files which breaks when loading non-root website paths
+•HtmlWebpackPlugin injects relative path files which breaks when loading non-root website paths
 
-•	 Webpack how to build production code and how to use it
+•Webpack how to build production code and how to use it
 
-•	 webpack is not recognized as a internal or external command,operable program or batch file.
+•webpack is not recognized as a internal or external command,operable program or batch file.
 
-•	 How to create multiple output paths in Webpack config. TO DO
+•How to create multiple output paths in Webpack config. TO DO
 
-•	 Webpack-dev-server compiles files but does not refresh or make compiled javascript available to browser -- watch option , May be output path not correct .
+•Webpack-dev-server compiles files but does not refresh or make compiled javascript available to browser -- watch option , May be output path not correct .
 
-•	 Webpack loaders vs plugins; what’s the difference?
+•Webpack loaders vs plugins; what’s the difference?
 
 Loader Features
 Loaders can be chained. Each loader in the chain applies transformations to the processed resource. A chain is executed in reverse order. The first loader passes its result (resource with applied transformations) to the next one, and so forth. Finally, webpack expects JavaScript to be returned by the last loader in the chain.
@@ -202,15 +197,48 @@ Plugin
 A webpack plugin is a JavaScript object that has an apply method. This apply method is called by the webpack compiler, giving access to the entire compilation lifecycle.
 
 
-•	Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
-•	Error: Cannot resolve module ‘style-loader’
-•	Webpack import returns undefined, depending on the order of imports
-•	Serving static assets in webpack dev server
-•	Conflict: Multiple assets emit to the same filename
-•	Is it possible to write webpack config in typescript?
-•	How to minify ES6 code using Webpack?
-• What is the value of using Webpack with HTTP/2 ? TO DO
-• How to use images in css with Webpack
+•Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
+•Error: Cannot resolve module ‘style-loader’
+•Webpack import returns undefined, depending on the order of imports
+•Serving static assets in webpack dev server
+•Conflict: Multiple assets emit to the same filename
+•Is it possible to write webpack config in typescript?
+•How to minify ES6 code using Webpack?
+•What is the value of using Webpack with HTTP/2 ? TO DO
+•How to use images in css with Webpack
+•Explain me the difference between NPM vs. Bower vs. Browserify vs. Gulp vs. Grunt vs. Webpack?
+
+npm & bower are package managers. They just download the dependencies and
+
+don't know how to build projects on their own. What they know is to call
+webpack/gulp/grunt after fetching all the dependencies.
+bower is like npm, but builds flattened dependencies trees (unlike npm
+
+which do it recursively). Meaning npm fetches the dependencies for each
+dependency (may fetch the same a few times), while bower expects you to
+manually include sub-dependencies. Sometimes bower and npm are used together
+for front-end and back-end respectively (since each megabyte might matter on
+front-end).
+grunt and gulp are task runners to automate everything that can be automated
+
+(i.e. compile CSS/Sass, optimize images, make a bundle and minify/transpile it).
+grunt vs. gulp (is like maven vs. gradle or configuration vs. code).
+
+Grunt is based on configuring separate independent tasks, each task
+opens/handles/closes file. Gulp requires less amount of code and is based on
+Node streams, which allows it to build pipe chains (w/o reopening the same file)
+and makes it faster.
+webpack (webpack-dev-server) - Webpack is a build tool that puts all of your assets, including Javascript, images, fonts, and CSS, in a dependency graph. 
+npm/bower + plugins may replace task runners. Their abilities often
+
+intersect so there are different implications if you need to use gulp/grunt
+over npm + plugins. But task runners are definitely better for complex tasks
+(e.g. "on each build create bundle, transpile from ES6 to ES5, run it at all
+browsers emulators, make screenshots and deploy to dropbox through ftp").
+browserify allows packaging node modules for browsers. browserify vs
+
+node's require is actually [AMD vs
+CommonJS](https://addyosmani.com/writing-modular-js/).
 
 
 URLs:
