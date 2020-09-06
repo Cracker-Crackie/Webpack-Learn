@@ -3,6 +3,17 @@
 •	What is Webpack? 
 Webpack is a static module bundler for JavaScript applications — it takes all the code from your application and makes it usable in a web browser. Modules are reusable chunks of code built from your app’s JavaScript, node_modules, images, and the CSS styles which are packaged to be easily used in your website. Webpack separates the code based on how it is used in your app, and with this modular breakdown of responsibilities, it becomes much easier to manage, debug, verify, and test your code.
 
+•	What is Grunt.
+In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
+
+The Grunt ecosystem is huge and it's growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn't already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. See how to get started.
+
+what is Gulp ?
+ A toolkit to automate & enhance your workflow
+Leverage gulp and the flexibility of JavaScript to automate slow, repetitive workflows and compose them into efficient build pipelines.Gulp is a task runner that uses Node.js as a platform. Gulp purely uses the JavaScript code and helps to run front-end tasks and large-scale web applications. It builds system automated tasks like CSS and HTML minification, concatenating library files, and compiling the SASS files. These tasks can be run using Shell or Bash scripts on the command line.
+
+However, while Gulp is primarily based on the node.js module stream, Grunt mainly uses the fs (file system) module, which highlights one of the most important differences between the two tools: Grunt is strictly file-oriented and creates temporary local files during the execution of the tasks. Gulp, on the other hand, handles the processes via the memory and writes them in the target file immediately, giving the program a speed advantage.
+
 •	What is a bundle in Webpack?
 When Webpack processes your application, it builds a dependency graph which maps out the modules that your project needs and generates one or more bundles. A bundle is a distinct grouping of connected code that has been compiled and transformed for the browser.
 If one file depends on another (it uses the code from a separate file), Webpack treats this as a dependency. Webpack also takes your non-code assets (images, fonts, styles, etc.) and converts them to dependencies for your application.
@@ -191,7 +202,7 @@ Plugin
 A webpack plugin is a JavaScript object that has an apply method. This apply method is called by the webpack compiler, giving access to the entire compilation lifecycle.
 
 
-•	 Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
+•	Webpack vs webpack-dev-server vs webpack-dev-middleware vs webpack-hot-middleware vs etc
 •	Error: Cannot resolve module ‘style-loader’
 •	Webpack import returns undefined, depending on the order of imports
 •	Serving static assets in webpack dev server
@@ -215,6 +226,7 @@ URLs:
 •	https://webpack.js.org/loaders/
 • https://github.com/systemjs/systemjs
 • https://medium.com/@imranhsayed/webpack-loaders-and-plugins-e13f79fe6b32
+• https://alligator.io/tooling/webpack-gulp-grunt-browserify/
 
 
 
