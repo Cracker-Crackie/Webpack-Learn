@@ -118,7 +118,7 @@ What’s in the stats file?
 As example of the stats file can be found inside the Bonsai repo itself right here.
 The stats file contains full file paths, the file sizes, and the relationships between each of the modules in your project. The online Bonsai analyser reads this data locally in your browser and doesn’t upload anything.
 
-•	What is treemapping / TreeShaking? Tree shaking is a term commonly used in the JavaScript context for dead-code elimination. When we import and export modules in JavaScript, most of the time there is unused code floating around. Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
+•What is treemapping / TreeShaking? Tree shaking is a term commonly used in the JavaScript context for dead-code elimination. When we import and export modules in JavaScript, most of the time there is unused code floating around. Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
 Tools like webpack will detect dead code and mark it as “unused module” but it won’t remove the code. Webpack relies on minifiers to cleanup dead code, one of them is UglifyJS plugin, which will eliminate the dead code from the bundle.
 
 
@@ -242,20 +242,20 @@ CommonJS](https://addyosmani.com/writing-modular-js/).
 
 
 URLs:
-•	https://www.fullstack.cafe/webpack
-•	https://github.com/styopdev/webpack-interview-questions/blob/master/answers.md
-•	https://github.com/styopdev/webpack-interview-questions
-•	http://www.lib4dev.in/info/styopdev/webpack-interview-questions/92639750
-•	https://github.com/kukuu/webpack
-•	https://developpaper.com/collection-of-webpack-interview-questions/
-•	https://blog.jakoblind.no/how-webpack-decides-what-to-bundle/
-• https://docs.w3cub.com/webpack/plugins/mini-css-extract-plugin/
-• https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
-•	https://webpack.js.org/loaders/
-• https://github.com/systemjs/systemjs
-• https://medium.com/@imranhsayed/webpack-loaders-and-plugins-e13f79fe6b32
-• https://alligator.io/tooling/webpack-gulp-grunt-browserify/
-• https://fedev.tech/topic/webpack
+•https://www.fullstack.cafe/webpack
+•https://github.com/styopdev/webpack-interview-questions/blob/master/answers.md
+•https://github.com/styopdev/webpack-interview-questions
+•http://www.lib4dev.in/info/styopdev/webpack-interview-questions/92639750
+•https://github.com/kukuu/webpack
+•https://developpaper.com/collection-of-webpack-interview-questions/
+•https://blog.jakoblind.no/how-webpack-decides-what-to-bundle/
+•https://docs.w3cub.com/webpack/plugins/mini-css-extract-plugin/
+•https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
+•https://webpack.js.org/loaders/
+•https://github.com/systemjs/systemjs
+•https://medium.com/@imranhsayed/webpack-loaders-and-plugins-e13f79fe6b32
+•https://alligator.io/tooling/webpack-gulp-grunt-browserify/
+•https://fedev.tech/topic/webpack
 
 
 
