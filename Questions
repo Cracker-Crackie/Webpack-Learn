@@ -240,6 +240,9 @@ browserify allows packaging node modules for browsers. browserify vs
 node's require is actually [AMD vs
 CommonJS](https://addyosmani.com/writing-modular-js/).
 
+•Which modules design patterns webpack supports out of the box? common.js, amd and es6 (since webpack 2).
+
+
 
 URLs:
 •https://www.fullstack.cafe/webpack
