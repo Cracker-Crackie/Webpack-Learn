@@ -62,3 +62,10 @@ Output completion: after determining the output content, determine the output pa
 In the above process, webpack will broadcast specific events at a specific point in time. After listening to the interested events, the plug-in will execute specific logic, and the plug-in can call the API provided by webpack to change the running results of webpack.
 
 
+https://medium.com/dailyjs/webpack-4-splitchunks-plugin-d9fbbe091fd0
+
+
+
+
+
+
