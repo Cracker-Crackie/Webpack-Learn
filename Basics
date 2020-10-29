@@ -49,4 +49,16 @@ Webpack in play
 3 loaders
 4 plugins
 
+What is the build process of webpack? From reading configuration to output file?
+The running process of webpack is a serial process. From start to end, the following processes will be executed successively:
+
+Initialization parameters: read and merge parameters from configuration files and shell statements to get the final parameters;
+Start compilation: initialize the compiler object with the parameters obtained in the previous step, load all configured plug-ins, and execute the run method of the object to start compiling;
+Determine the entry: find all the entry files according to the entry in the configuration;
+Compile module: starting from the entry file, call all configured loaders to translate the module, and then find out the module that the module depends on, and then recurs this step until all the files dependent on the entry have been processed in this step;
+Complete module compilation: after translating all modules with loader in step 4, the final content of each module after translation and the dependency relationship between them are obtained;
+Output resources: according to the dependency relationship between entries and modules, assemble chunks containing multiple modules, and then convert each chunk into a separate file and add it to the output list. This step is the last opportunity to modify the output content;
+Output completion: after determining the output content, determine the output path and file name according to the configuration, and write the file content to the file system.
+In the above process, webpack will broadcast specific events at a specific point in time. After listening to the interested events, the plug-in will execute specific logic, and the plug-in can call the API provided by webpack to change the running results of webpack.
+
 
